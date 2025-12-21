@@ -44,19 +44,19 @@ export class CheckingNumberCard {
 
   // Проверка по алгоритму Луна
   checkingLuna(numberCard) {
-    const oddNumbers = numberCard
-      .split("")
-      .filter((_, index) => index % 2 === 0);
-    const evenNumbers = numberCard
-      .split("")
-      .filter((_, index) => index % 2 === 1);
-    let sumOddNumbers = oddNumbers.reduce((acc, item) => {
-      item *= 2;
-      if (item > 9) item -= 9;
-      return acc + item;
-    }, 0);
-    let sumEvenNumbers = evenNumbers.reduce((a, b) => a + Number(b), 0);
-    return (sumOddNumbers + sumEvenNumbers) % 10 === 0;
+    let sum = 0;
+    const digits = numberCard.split("").map(Number);
+    for (let i = digits.length - 2; i >= 0; i -= 2) {
+      let doubled = digits[i] * 2;
+      if (doubled > 9) {
+        doubled -= 9;
+      }
+      sum += doubled;
+    }
+    for (let i = digits.length - 1; i >= 0; i -= 2) {
+      sum += digits[i];
+    }
+    return sum % 10 === 0;
   }
 
   // проверка к какой платежной системе относится
