@@ -1,4 +1,4 @@
-import imgMir from "."
+import imgMir from ".";
 import imgVisa from "../img/visa.png";
 import imgMaster from "../img/mastercard.png";
 import imgAmex from "../img/amex.png";
