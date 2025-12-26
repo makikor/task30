@@ -3,7 +3,7 @@ import imgVisa from "../img/visa.png";
 import imgMaster from "../img/mastercard.png";
 import imgAmex from "../img/amex.png";
 import imgDiscover from "../img/discover.png";
-import imgJsb from "../img/jcb.png";
+import imgJcb from "../img/jcb.png";
 import imgDiners from "../img/diners.png";
 import { CheckingNumberCard } from "./checkingNumberCard ";
 
@@ -17,7 +17,7 @@ export class WidgetCardRender {
       master: imgMaster,
       amex: imgAmex,
       discover: imgDiscover,
-      jsb: imgJsb,
+      jcb: imgJcb,
       diners: imgDiners,
     };
   }

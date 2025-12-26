@@ -17,7 +17,7 @@ export class CheckingNumberCard {
       discover: {
         6: [16, 17, 18, 19],
       },
-      jsb: {
+      jcb: {
         3: [16, 17, 18, 19],
       },
       diners: {
